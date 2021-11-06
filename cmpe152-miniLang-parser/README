@@ -1,0 +1,33 @@
+/* A sample passer that generate a syntax tree */
+
+First, you need to install JDK on your machine if you haven't
+done so. After installation, you may need to update your
+environment variables (e.g., JAVA_HOME and PATH) so that
+you can invoke javac from command line. If you use an IDE,
+configure your IDE so that it can find your Java installation
+and use its libraries.
+
+Depending on whether you use command line or an IDE, follow
+one of the below two instructions to get the sample compiled
+and run:
+
+1. If you use command line
+To compile in command line, enter the src directory and run
+
+javac symbols/*.java
+javac inter/*.java
+javac lexer/*.java
+javac parser/*.java
+javac main/Main.java
+
+To run the lexer in command line:
+
+java  main.Main < test_file
+
+2. If you use IntelliJ Idea IDE
+In the IntelliJ IDE, create a project and import the code. Then use
+the below steps to build and run:
+(1) Under "Run"->"Edit Configurations", put main.Main as main class.
+Specify your test file in "Redirect input from".
+(2) Click "Run"->"Run Main"
+
