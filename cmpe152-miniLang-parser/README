@@ -1,44 +1,3 @@
-/* A sample passer that generate a syntax tree */
-
-First, you need to install JDK on your machine if you haven't
-done so. After installation, you may need to update your
-environment variables (e.g., JAVA_HOME and PATH) so that
-you can invoke javac from command line. If you use an IDE,
-configure your IDE so that it can find your Java installation
-and use its libraries.
-
-Depending on whether you use command line or an IDE, follow
-one of the below two instructions to get the sample compiled
-and run:
-
-1. If you use command line
-To compile in command line, enter the src directory and run
-
-javac symbols/*.java
-javac inter/*.java
-javac lexer/*.java
-javac parser/*.java
-javac main/Main.java
-
-To run the lexer in command line:
-
-java  main.Main < test_file
-
-2. If you use IntelliJ Idea IDE
-In the IntelliJ IDE, create a project and import the code. Then use
-the below steps to build and run:
-(1) Under "Run"->"Edit Configurations", put main.Main as main class.
-Specify your test file in "Redirect input from".
-(2) Click "Run"->"Run Main"
-
-
-
-
-
-
-
-
-
 A parser program analyzes a string or text into logical syntactic components. 
 Our project parses the input using the top-down parsing approach and indicates whether an input string is syntactically appropriate. 
 The project performs semantic actions such as enforcing scoping rules, type checking, tree generation, etc.
@@ -87,11 +46,7 @@ The Top-Down Parser performs the following tasks:
 
 Finding the leftmost derivation of a given input string
 Constructs a parse tree for the given input string starting from the root node and creates the nodes of the parse tree in pre-order
-Performs back-tracking, repeating the scan of the input string
-
-
-Builds parse trees from the (Top) root node and works its way down to the (bottom) leaves
-
+Performs back-tracking, repeating the scan of the input string.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -103,7 +58,7 @@ Builds parse trees from the (Top) root node and works its way down to the (botto
 4) HOW TO TEST:
 
 To test the project add a new "test_file.txt" or edit the one provided with the
-desired input text and run the program to get the output.
+desired input text and run the program to get the output of the parse tree.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
