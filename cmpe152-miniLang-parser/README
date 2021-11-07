@@ -50,7 +50,13 @@ Performs back-tracking, repeating the scan of the input string.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3) 
+3)
+1. Certain token definitions (e.g., ID and FOR) are different
+2. Types checking
+Type checking is the process of verifying and enforcing the constraints of types. Type casting allows you to variables from one type and store it in another type. 
+3. The self- increment and decrement expressions 
+4. For loop (sample does not implement a For tree node or the corresponding parsing logic)
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
