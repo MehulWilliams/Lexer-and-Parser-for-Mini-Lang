@@ -31,3 +31,83 @@ the below steps to build and run:
 Specify your test file in "Redirect input from".
 (2) Click "Run"->"Run Main"
 
+A parser program analyzes a string or text into logical syntactic components. 
+Our project parses the input using the top-down parsing approach and indicates whether an input string is syntactically appropriate. The project performs semantic actions such as enforcing scoping rules, type checking, tree generation, etc.
+
+Our project uses a Java programming language since the source code provided
+by our Professor used java.
+
+
+TABLE OF CONTENTS:
+
+1) How to install the project.
+2) How to use the project.
+3) --- 
+4) How to test.
+5) Credits.
+6) Conclusion.
+
+
+
+1) HOW TO INSTALL THE PROJECT:
+
+First, you need to install JDK on your machine if you haven't done so already.
+Put the files Lexer.java and Token.java inside a lexer folder.
+Put the Main.java file under main folder.
+Put both the lexer folder and the main folder inside the source "src" folder. 
+Add test file "test_file.txt" into the source folder. 
+Make sure the name of the file matches the one listed. 
+Run the program on your machine using any integrated development environment.
+
+
+
+
+2. If you use IntelliJ Idea IDE
+In the IntelliJ IDE, create a project and import the code. Then use
+the below steps to build and run:
+(1) Under "Run"->"Edit Configurations", put main.Main as main class.
+Specify your test file in "Redirect input from".
+(2) Click "Run"->"Run Main"
+
+
+
+2) HOW TO USE THE PROJECT:
+
+The project is used to verify if the arrangement of the input or text can form proper sentences.
+
+The Top-Down Parser performs the following tasks:
+
+Finding the leftmost derivation of a given input string
+Constructs a parse tree for the given input string starting from the root node and creates the nodes of the parse tree in pre-order
+Performs back-tracking, repeating the scan of the input string
+
+
+Builds parse trees from the (Top) root node and works its way down to the (bottom) leaves
+
+
+
+3) TOKEN DEFINITION:
+
+
+
+4) HOW TO TEST:
+
+To test the project add a new "test_file.txt" or edit the one provided with the
+desired input characters and run the program to get the output. Then match the 
+tokens with the list provided above to check for correctness.
+
+
+
+
+5) CREDITS:
+
+AARUSHI DHANGER
+AISHWAR GUPTA
+ARMICA QUEJADO
+MEHUL WILLIAMS
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6) CONCLUSION:
+
+Within this project, we learned to construct a Top-Down Parser. Through this project, we found that ----
