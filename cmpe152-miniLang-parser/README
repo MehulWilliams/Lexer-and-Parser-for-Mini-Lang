@@ -31,12 +31,20 @@ the below steps to build and run:
 Specify your test file in "Redirect input from".
 (2) Click "Run"->"Run Main"
 
-A parser program analyzes a string or text into logical syntactic components. 
-Our project parses the input using the top-down parsing approach and indicates whether an input string is syntactically appropriate. The project performs semantic actions such as enforcing scoping rules, type checking, tree generation, etc.
+
+
+
+
+
+
+
+
+A parser program analyzes a string or text into logical syntactic components. Our project parses the input using the top-down parsing approach and indicates whether an input string is syntactically appropriate. The project performs semantic actions such as enforcing scoping rules, type checking, tree generation, etc.
 
 Our project uses a Java programming language since the source code provided
 by our Professor used java.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 TABLE OF CONTENTS:
 
@@ -48,6 +56,7 @@ TABLE OF CONTENTS:
 6) Conclusion.
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1) HOW TO INSTALL THE PROJECT:
 
@@ -70,6 +79,7 @@ Specify your test file in "Redirect input from".
 (2) Click "Run"->"Run Main"
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2) HOW TO USE THE PROJECT:
 
@@ -85,10 +95,12 @@ Performs back-tracking, repeating the scan of the input string
 Builds parse trees from the (Top) root node and works its way down to the (bottom) leaves
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 3) TOKEN DEFINITION:
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 4) HOW TO TEST:
 
@@ -98,6 +110,7 @@ tokens with the list provided above to check for correctness.
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 5) CREDITS:
 
@@ -106,7 +119,7 @@ AISHWAR GUPTA
 ARMICA QUEJADO
 MEHUL WILLIAMS
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 6) CONCLUSION:
 
