@@ -39,10 +39,10 @@ Specify your test file in "Redirect input from".
 
 
 
-A parser program analyzes a string or text into logical syntactic components. Our project parses the input using the top-down parsing approach and indicates whether an input string is syntactically appropriate. The project performs semantic actions such as enforcing scoping rules, type checking, tree generation, etc.
-
-Our project uses a Java programming language since the source code provided
-by our Professor used java.
+A parser program analyzes a string or text into logical syntactic components. 
+Our project parses the input using the top-down parsing approach and indicates whether an input string is syntactically appropriate. 
+The project performs semantic actions such as enforcing scoping rules, type checking, tree generation, etc.
+Our project uses a Java programming language since the source code provided by our Professor used java.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -69,9 +69,7 @@ Make sure the name of the file matches the one listed.
 Run the program on your machine using any integrated development environment.
 
 
-
-
-2. If you use IntelliJ Idea IDE
+If you use IntelliJ Idea IDE
 In the IntelliJ IDE, create a project and import the code. Then use
 the below steps to build and run:
 (1) Under "Run"->"Edit Configurations", put main.Main as main class.
@@ -97,7 +95,7 @@ Builds parse trees from the (Top) root node and works its way down to the (botto
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3) TOKEN DEFINITION:
+3) 
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -105,9 +103,7 @@ Builds parse trees from the (Top) root node and works its way down to the (botto
 4) HOW TO TEST:
 
 To test the project add a new "test_file.txt" or edit the one provided with the
-desired input characters and run the program to get the output. Then match the 
-tokens with the list provided above to check for correctness.
-
+desired input text and run the program to get the output.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
