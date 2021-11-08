@@ -61,25 +61,6 @@ public class Parser {
             top.put(tok, id);
             used = used + p.width;
         }
-        while (look.tag == Tag.NUM) {   // D -> type ID ;
-            Type p = numType();
-            Token tok = look;
-            match(Tag.ID);
-            match(';');
-            Id id = new Id((Word) tok, p, used);
-            top.put(tok, id);
-            used = used + p.width;
-        }
-        while (look.tag == Tag.REAL) {   // D -> type ID ;
-            Type p = realType();
-            Token tok = look;
-            match(Tag.ID);
-            match(';');
-            Id id = new Id((Word) tok, p, used);
-            top.put(tok, id);
-            used = used + p.width;
-        }
-        //System.out.println("decls called");
     }
 
     Type type() throws IOException {
