@@ -1,0 +1,4 @@
+//ERROR
+      float f = 0;
+      float l += f;
+}
