@@ -1,5 +1,4 @@
 //Test file 4
-
 {
     int b; b = 1;
     {
