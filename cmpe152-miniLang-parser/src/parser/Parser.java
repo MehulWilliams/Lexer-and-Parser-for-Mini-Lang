@@ -23,15 +23,17 @@ public class Parser {
     }
 
     void error(String s) {
-        throw new Error("near line " + lex.line + ": " + s);
+        throw new Error(" Near line " + lex.line + ": " + s);
     }
 
     void match(int t) throws IOException {
-        System.out.println(t);
         if (look.tag == t) move();
         else {
-            System.out.println("syntax tag: " + t);
-            error("syntax error");
+            StringBuffer sb =new StringBuffer();
+
+            //System.out.println("error's tag: " + (char)look.tag + ", should be: " + t);
+            //System.out.println("error info: " + look.toString());
+            error("Syntax error");
         }
     }
 
@@ -61,6 +63,7 @@ public class Parser {
             top.put(tok, id);
             used = used + p.width;
         }
+        //System.out.println("decls called");
     }
 
     Type type() throws IOException {
@@ -171,7 +174,7 @@ public class Parser {
         Token t = look;
         match(Tag.ID);
         Id id = top.get(t);
-        if (id == null) error(t.toString() + " undeclared");
+        if (id == null) error("Grammar error: " + t.toString() + " undeclared");
         move();
         stmt = new Set(id, allexpr());  // S -> id = E ;
         match(';');
@@ -183,7 +186,7 @@ public class Parser {
         Token t = look;
         match(Tag.ID);
         Id id = top.get(t);
-        if (id == null) error(t.toString() + " undeclared");
+        if (id == null) error("Grammar error: " + t.toString() + " undeclared");
         move();
         stmt = new Set(id, allexpr());  // S -> id = E ;
         return stmt;
@@ -264,6 +267,7 @@ public class Parser {
                 return x;
             case Tag.NUM:
                 x = new Constant(look, Type.Int);
+                //if
                 move();
                 return x;
             case Tag.REAL:
@@ -278,15 +282,15 @@ public class Parser {
                 x = Constant.False;
                 move();
                 return x;
-            default:
-                error("syntax error");
-                return x;
             case Tag.ID:
                 String s = look.toString();
                 Id id = top.get(look);
-                if (id == null) error(look.toString() + " undeclared");
+                if (id == null) error("Grammar error: " + look.toString() + " undeclared");
                 move();
                 return id;
+            default:
+                error("Type error");
+                return x;
         }
     }
 }
