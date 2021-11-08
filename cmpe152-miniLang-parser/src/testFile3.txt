@@ -1,3 +1,4 @@
+// Test file 3
 {
 	bool b = true;
 	if(b = 0)//ERROR
