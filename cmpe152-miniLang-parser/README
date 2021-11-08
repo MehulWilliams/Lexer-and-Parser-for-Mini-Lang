@@ -127,7 +127,7 @@ d) For Loop
 
 4) HOW TO TEST:
 
-- Add a new "test_file.txt" or edit the one provided with desired text. 
+- There are five different test files to choose from for testing the program or you may input the desired text. 
 - Make sure the new file is located in the source folder for the project.
 - Make sure the file name matches the name under "Redirect input from"
 - Run the program to get the output of the parse tree.
