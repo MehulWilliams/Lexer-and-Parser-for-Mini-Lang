@@ -7,9 +7,12 @@ public class Set extends Stmt {
 
    public Set(Id i, Expr x) {
       id = i; expr = x;
-      if ( check(id.type, expr.type) == null ) error("Type Error");
-      children.add(id);
-      children.add(expr);
+      if ( check(id.type, expr.type) == int ) error("Type Error");
+         children.add(id);
+         children.add(expr);
+      else if()
+      
+      
    }
 
    public String getNodeStr() {
