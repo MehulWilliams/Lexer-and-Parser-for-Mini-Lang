@@ -1,3 +1,4 @@
+// Test file 2
 {
 	string s = “world”; string t = “hello”;
 	string r = t ++ s; //ERROR
