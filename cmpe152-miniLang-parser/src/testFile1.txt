@@ -1,5 +1,3 @@
-// Test file 1
-//ERROR
       float f = 0;
       float l += f;
 }
