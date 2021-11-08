@@ -1,5 +1,6 @@
 {
-	string s = “world”; string t = “hello”;
+	string s;
+	s= “world”; string t = “hello”;
 	string r = t ++ s; 
 	return r;
 }
