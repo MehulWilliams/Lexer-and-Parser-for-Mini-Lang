@@ -42,7 +42,7 @@ If using IntelliJ Idea IDE by Jet Brains:
 - Add an extra '}' at the end of the file since this was a bug in the original
 sample code provided by our professor.
 
-Downloaded projects might give errors, in that case:
+Downloaded projects might give configuration errors, in that case:
 - Download and setup the SDK from the top right corner below the close button.
 - Go to settings and click on project structure to open a pop up.
 - Under content root, delete the recent project folder.
