@@ -2,16 +2,25 @@ package lexer;
 
 public class Word extends Token {
 
-   public String lexeme = "";
-   public Word(String s, int tag) { super(tag); lexeme = s; }
-   public String toString() { return lexeme; }
+    public String lexeme = "";
 
-   public static final Word
+    public Word(String s, int tag) {
+        super(tag);
+        lexeme = s;
+    }
 
-      and = new Word( "&&", Tag.AND ),  or = new Word( "||", Tag.OR ),
-      eq  = new Word( "==", Tag.EQ  ),  ne = new Word( "!=", Tag.NE ),
-      le  = new Word( "<=", Tag.LE  ),  ge = new Word( ">=", Tag.GE ),
+    public String toString() {
+        return lexeme;
+    }
 
-      True   = new Word( "true",  Tag.TRUE  ),
-      False  = new Word( "false", Tag.FALSE );
+    public static final Word
+
+            and = new Word("&&", Tag.AND), or = new Word("||", Tag.OR),
+            eq = new Word("==", Tag.EQ), ne = new Word("!=", Tag.NE),
+            le = new Word("<=", Tag.LE), ge = new Word(">=", Tag.GE),
+
+    True = new Word("true", Tag.TRUE),
+            False = new Word("false", Tag.FALSE),
+            incr = new Word("++", Tag.INCR),
+            decr = new Word("--", Tag.DECR);
 }
