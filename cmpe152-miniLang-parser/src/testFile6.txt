@@ -1,0 +1,6 @@
+{
+	int i; int j;
+	int n = i +j;
+	for(i = 5; i < n; i--){
+		j++;
+}
