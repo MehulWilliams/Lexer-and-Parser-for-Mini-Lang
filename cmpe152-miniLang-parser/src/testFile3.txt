@@ -1,0 +1,7 @@
+{
+	bool b = true;
+	if(b = 0)//ERROR
+{
+		return false;
+	}
+}
