@@ -1,7 +1,7 @@
 A parser program analyzes a string or text into logical syntactic components. 
 Our project parses the input using the top-down parsing approach and indicates whether an input string is syntactically appropriate. 
 The project performs semantic actions such as enforcing scoping rules, type checking, tree generation, etc.
-Our project uses a Java programming language since the source code provided by our Professor used java.
+Our project uses a Java programming language since the source code provided by our professor used java.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -25,8 +25,7 @@ Put the Main.java file under main folder.
 Put both the lexer folder and the main folder inside the source "src" folder. 
 Add test file "test_file.txt" into the source folder. 
 Make sure the name of the file matches the one listed. 
-Run the program on your machine using any integrated development environment.
-
+Run the program on your machine using any integrated development environment (IDE).
 
 If you use IntelliJ Idea IDE
 In the IntelliJ IDE, create a project and import the code. Then use
@@ -48,16 +47,65 @@ Finding the leftmost derivation of a given input string
 Constructs a parse tree for the given input string starting from the root node and creates the nodes of the parse tree in pre-order
 Performs back-tracking, repeating the scan of the input string.
 
+3. The self- increment and decrement expressions 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3)
-1. Certain token definitions (e.g., ID and FOR) are different
-2. Types checking
-Type checking is the process of verifying and enforcing the constraints of types. Type casting allows you to variables from one type and store it in another type. 
+1. Token Definitions 
+
+We have used 31 tokens in this project as listed below:
+
+#	Token Name	Symbolic Pattern
+
+-1	empty		empty
+-2	EOF		EOF
+
+-3	BASE_TYPE	int	 
+-4	BASE_TYPE	float
+-5	BASE_TYPE	bool
+
+1	AND            	&&
+3	BREAK	        break
+4	DO	        do
+5	ELSE	        else
+6	EQ	        ==
+7	FALSE	        false
+8	FOR	        for
+9	GE	        >=
+10	ID	        [A-Za-z][A-Za-z0-9_]*
+11	IF	        if
+12	LE	        <=
+13	NE	        !=
+14	NUM	        [0-9]+
+15	OR	        ||
+16	REAL	        [0-9]+.[0-9]+
+17	TRUE	        true
+18	WHILE	        while
+19	;	        ;
+20	=	        =
+21	<	        <
+22	>	        >
+23	(	        (
+24	)	        )
+25	{	        {
+26	}	        }
+27	+	        +
+28	-	        -
+29	*	        *
+30	/	        /
+
+The EOF token indicated that we have reached the end of the file.
+
+The BASE_TYPE token has been divided into three separate BASE_TYPE tokens, named
+respectively in the lexer's token table.
+
+2. Types Checking
+
+Type checking is the process of verifying and enforcing the constraints of types. 
+If the input uses the wrong variable, 'Type Error' will be displayed.
+
 3. The self- increment and decrement expressions 
-4. For loop (sample does not implement a For tree node or the corresponding parsing logic)
-
-
+4. For Loop
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
