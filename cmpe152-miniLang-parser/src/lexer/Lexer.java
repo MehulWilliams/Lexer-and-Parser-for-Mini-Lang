@@ -76,6 +76,12 @@ public class Lexer {
             case '>':
                 if (readch('=')) return Word.ge;
                 else return new Token('>');
+            case '+':
+                if (readch('+')) return Word.incr;
+                else return new Token('+');
+            case '-':
+                if (readch('-')) return Word.decr;
+                else return new Token('-');
         }
         if (Character.isDigit(peek)) {
             int v = 0;
