@@ -5,22 +5,40 @@ public class Set extends Stmt {
 
    public Id id; public Expr expr;
 
+   /*
    public Set(Id i, Expr x) {
       id = i; expr = x;
-      if ( check(id.type, expr.type) == Int ) error("Type Error");
+      if ( check(id.type, expr.type) == int ) {
+         error("Type Error");
          children.add(id);
          children.add(expr);
-      else if( check(id.type, expr.type) == Double ) error("Type Error");
+      }
+      else if( check(id.type, expr.type) ==  double ){
+         error("Type Error");
          children.add(id);
-         children.add(expr);)
-      else if( check(id.type, expr.type) == Char ) error("Type Error");
+         children.add(expr);
+      }
+      else if( check(id.type, expr.type) == char ){
+         error("Type Error");
          children.add(id);
-         children.add(expr);)
-      else ( check(id.type, expr.type) == Float ) error("Type Error");
+         children.add(expr);
+      }
+      else ( check(id.type, expr.type) == float ){
+         error("Type Error");
          children.add(id);
-         children.add(expr);)      
+         children.add(expr);
+      }
    }
 
+    */
+
+
+   public Set(Id i, Expr x) {
+      id = i; expr = x;
+      if ( check(id.type, expr.type) == null ) error(" Type error");
+      children.add(id);
+      children.add(expr);
+   }
    public String getNodeStr() {
       return "ASSIGN";
    }
