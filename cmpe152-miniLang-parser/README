@@ -122,6 +122,12 @@ If the input uses the wrong variable, 'Type Error' will be displayed.
 c) The self- increment and decrement expressions 
 
 d) For Loop
+A new For class was created to allow for creation of a fornode.
+A For object variable holds the nodes of the control variable, condition, and increment value.
+The logic was added in the stmt() method in the Parser class. The case checks for opening parenthesis, 
+an assigning statement for the control, an expression for the condition, the increment value, and finally a closing parenthesis.
+A modified assign method was made to assign the increment value without checking for a closing ; within the for loop's parenthesis.
+
 
 -------------------------------------------------------------------------------------------------------------------
 
