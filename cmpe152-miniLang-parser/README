@@ -105,6 +105,7 @@ Type checking is the process of verifying and enforcing the constraints of types
 If the input uses the wrong variable, 'Type Error' will be displayed.
 
 3. The self- increment and decrement expressions 
+
 4. For Loop
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -113,7 +114,6 @@ If the input uses the wrong variable, 'Type Error' will be displayed.
 
 To test the project add a new "test_file.txt" or edit the one provided with the
 desired input text and run the program to get the output of the parse tree.
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
