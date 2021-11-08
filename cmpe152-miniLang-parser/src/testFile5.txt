@@ -4,14 +4,16 @@ int i;
     {
          if (i == 5)
          {
-              bool flag = TRUE;
+              bool flag;
+              flag = true;
               break;
          }
          else
          {
               while(i > 0)
               {
-                   int a = 2*i;
+                   int a;
+                   a = 2*i;
               }
          }
     }
