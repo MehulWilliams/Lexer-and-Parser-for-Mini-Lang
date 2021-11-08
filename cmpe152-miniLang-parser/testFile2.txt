@@ -1,5 +1,0 @@
-{
-	string s = “world”; string t = “hello”;
-	string r = t ++ s; //ERROR
-	return r;
-}
