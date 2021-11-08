@@ -30,6 +30,28 @@ public class Set extends Stmt {
       }
    }
 
+ static Type*Int, *Char, *Bool, *Float;
+        static Type*get_Int() {
+        return Int;
+    }
+        static Type*get_Char()
+        {
+            return Char;
+        }
+        static Type*get_Bool()
+        {
+            return Bool;
+        }
+        static Type*get_Float()
+        {
+            return Float;
+        }
+        static Type*get_Double()
+        {
+            return Double;
+        }
+
+
     */
 
 
