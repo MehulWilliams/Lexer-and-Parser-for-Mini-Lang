@@ -1,3 +1,5 @@
 {
-      float f = 0;
-      float l += f;
+      float f;
+      f = 0;
+      float l;
+      f += f;
