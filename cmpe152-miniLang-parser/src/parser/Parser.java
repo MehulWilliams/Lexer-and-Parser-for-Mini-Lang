@@ -30,10 +30,7 @@ public class Parser {
         if (look.tag == t) move();
         else {
             StringBuffer sb =new StringBuffer();
-
-            //System.out.println("error's tag: " + (char)look.tag + ", should be: " + t);
-            //System.out.println("error info: " + look.toString());
-            error("Syntax error");
+            error("Grammar error");
         }
     }
 
@@ -63,7 +60,6 @@ public class Parser {
             top.put(tok, id);
             used = used + p.width;
         }
-        //System.out.println("decls called");
     }
 
     Type type() throws IOException {
@@ -164,11 +160,32 @@ public class Parser {
             case '{':
                 return block();
 
+            //Attempted increment logic
+            case Tag.INCR:
+                //Token tok = look;
+                System.out.println("********* INCR");
+                Token p = new Token(Tag.INCR);
+                move();
+                //Expr v = new Constant(look, Type.Int);
+                //x = new Arith('+',
+                //x = new Arith(tok, x, term());
+
             default:
                 return assign();
         }
     }
 
+    Stmt assign(Expr x) throws IOException {
+        Stmt stmt;
+        Token t = look;
+        match(Tag.ID);
+        Id id = top.get(t);
+        if (id == null) error("Grammar error: " + t.toString() + " undeclared");
+        move();
+        stmt = new Set(id, x);  // S -> id = E ;
+        match(';');
+        return stmt;
+    }
     Stmt assign() throws IOException {
         Stmt stmt;
         Token t = look;
@@ -181,7 +198,7 @@ public class Parser {
         return stmt;
     }
 
-    Stmt forIncrAssign() throws IOException {
+    Stmt forIncrAssign() throws IOException { //same as assign but without "match(';');" line
         Stmt stmt;
         Token t = look;
         match(Tag.ID);
@@ -257,6 +274,41 @@ public class Parser {
         return x;
     }
 
+    Expr factor(Expr x) throws IOException {
+        switch (look.tag) {
+            case '(':
+                move();
+                x = allexpr();
+                match(')');
+                return x;
+            case Tag.NUM:
+                x = new Constant(look, Type.Int);
+                //if
+                move();
+                return x;
+            case Tag.REAL:
+                x = new Constant(look, Type.Float);
+                move();
+                return x;
+            case Tag.TRUE:
+                x = Constant.True;
+                move();
+                return x;
+            case Tag.FALSE:
+                x = Constant.False;
+                move();
+                return x;
+            case Tag.ID:
+                String s = look.toString();
+                Id id = top.get(look);
+                if (id == null) error("Grammar error: " + look.toString() + " undeclared");
+                move();
+                return id;
+            default:
+                error("Type error");
+                return x;
+        }
+    }
     Expr factor() throws IOException {
         Expr x = null;
         switch (look.tag) {
