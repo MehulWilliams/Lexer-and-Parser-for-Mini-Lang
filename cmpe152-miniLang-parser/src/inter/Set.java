@@ -7,7 +7,7 @@ public class Set extends Stmt {
 
    public Set(Id i, Expr x) {
       id = i; expr = x;
-      if ( check(id.type, expr.type) == null ) error("type error");
+      if ( check(id.type, expr.type) == null ) error("Type Error");
       children.add(id);
       children.add(expr);
    }
