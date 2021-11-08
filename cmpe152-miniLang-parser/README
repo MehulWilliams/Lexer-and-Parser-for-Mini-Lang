@@ -31,6 +31,7 @@ First, you need to install JDK on your machine if you haven't done so already.
 - Add test file "test_file.txt" into the source folder. 
 - Make sure the name of the file matches the one listed. 
 - Run the program on your machine using any integrated development environment.
+- The sample code by professor requires us to add an extra '}' at the end.
 
 
 If using IntelliJ Idea IDE by Jet Brains:
@@ -38,6 +39,15 @@ If using IntelliJ Idea IDE by Jet Brains:
 - Under "Run"->"Edit Configurations", put main.Main as main class.
 - Specify your test file in "Redirect input from" statement.
 - Click "Run"->"Run Main" to execute the parser on the test file.
+- Add an extra '}' at the end of the file since this was a bug in the original
+sample code provided by our professor.
+
+Downloaded projects might give errors, in that case:
+- Download and setup the SDK from the top right corner below the close button.
+- Go to settings and click on project structure to open a pop up.
+- Under content root, delete the recent project folder.
+- Add the content root as the src folder.
+- Click apply and now build the project.
 
 -------------------------------------------------------------------------------------------------------------------
 
@@ -121,6 +131,7 @@ d) For Loop
 - Make sure the new file is located in the source folder for the project.
 - Make sure the file name matches the name under "Redirect input from"
 - Run the program to get the output of the parse tree.
+- Make sure to add an extra brace '}' at the end of the file to run.
 
 -------------------------------------------------------------------------------------------------------------------
 
